@@ -1,20 +1,26 @@
 import type { NextPage } from "next";
+import styled from "styled-components";
 import Header from "../components/layout/Header";
 import Profile from "../components/pages/Home/Profile";
-import styles from "../styles/Home.module.css";
 import Works from "../components/pages/Home/Works";
 import Careers from "../components/pages/Home/Careers";
 import Skils from "../components/pages/Home/Skils";
 
+
 const Home: NextPage = () => {
+  const Container = styled.div`
+    width: 85%;
+    max-width: 1025px;
+    margin: auto;
+  `;
   return (
-    <div className={styles.container}>
+    <Container>
       <Header />
       <Profile />
-      <Careers/>
+      <Careers />
       <Works />
       <Skils />
-    </div>
+    </Container>
   );
 };
 
